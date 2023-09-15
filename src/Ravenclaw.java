@@ -35,9 +35,14 @@ public class Ravenclaw extends Hogwarts {
         this.fullOfCreation = fullOfCreation;
     }
 
-    public static void equalsRavenclaw (Ravenclaw padma, Ravenclaw zhouChang){
-        if (padma.getWisdom() + padma.getClever() + padma.getFullOfCreation() > zhouChang.getWisdom() + zhouChang.getClever() + zhouChang.getFullOfCreation()) {
-            System.out.println(padma.getName() + " better");
+    @Override
+    public String toString() {
+        return super.toString( ) + "clever = " + clever + ", wisdom = " + wisdom + ", fullOfCreation = " + fullOfCreation;
+    }
+
+    public void equalsRavenclaw (Ravenclaw zhouChang){
+        if (this.getWisdom() + this.getClever() + this.getFullOfCreation() > zhouChang.getWisdom() + zhouChang.getClever() + zhouChang.getFullOfCreation()) {
+            System.out.println(this.getName() + " better");
         } else {
             System.out.println(zhouChang.getName() + " better");
             }

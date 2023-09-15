@@ -22,14 +22,14 @@ Slytherin graham = new Slytherin("Грехем", "Монтегю", 85, 84, 83,86
 Slytherin gregory = new Slytherin("Грегори", "Гойл", 85,82,86, 88,82);
 
 
-        Gryffindor.printObjectsStudent(harry);
+        harry.printObjectsStudent();
 
-        Gryffindor.equalsGryffindor(ron, hermione);
-        Hufflepuff.equalsHufflepuff(sedrick, jastin);
-        Ravenclaw.equalsRavenclaw(padma, zhouChang);
-        Slytherin.equalsSlytherin(graham, gregory);
+        hermione.equalsGryffindor(ron);
+        jastin.equalsHufflepuff(sedrick);
+        zhouChang.equalsRavenclaw(padma);
+        gregory.equalsSlytherin(graham);
 
-        Hogwarts.equalsAllStudents(draco, marcus);
+        draco.equalsAllStudents(marcus);
     }
 
 }

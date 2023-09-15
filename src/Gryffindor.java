@@ -34,13 +34,19 @@ public class Gryffindor extends Hogwarts {
     public void setCourage(int courage) {
         this.courage = courage;
     }
-    public static void printObjectsStudent(Gryffindor gryffindor){
-        System.out.println(gryffindor.getName() + " " + gryffindor.getSurname() + " , spell - " + gryffindor.getSpell() + " , transgression - " + gryffindor.getTransgression() + " ,  generosity - " + gryffindor.getGenerosity() + ", honor - " + gryffindor.getHonor() + " , courage - " + gryffindor.getCourage());
+//    public static void printObjectsStudent(Gryffindor gryffindor){
+//        System.out.println(gryffindor.getName() + " " + gryffindor.getSurname() + " , spell - " + gryffindor.getSpell() + " , transgression - " + gryffindor.getTransgression() + " ,  generosity - " + gryffindor.getGenerosity() + ", honor - " + gryffindor.getHonor() + " , courage - " + gryffindor.getCourage());
+//    }
+
+
+    @Override
+    public String toString() {
+        return super.toString( ) + ", generosity = " + generosity + ", honor = " + honor + ", courage = " + courage;
     }
 
-    public static void equalsGryffindor (Gryffindor ron, Gryffindor hermione) {
-        if (ron.getGenerosity() + ron.getHonor() + ron.getCourage() > hermione.getGenerosity() + hermione.getHonor() + hermione.getCourage()) {
-            System.out.println(ron.getName() + " better");
+    public void equalsGryffindor (Gryffindor hermione) {
+        if (this.getGenerosity() + this.getHonor() + this.getCourage() < hermione.getGenerosity() + hermione.getHonor() + hermione.getCourage()) {
+            System.out.println(this.getName() + " better");
         } else {
             System.out.println(hermione.getName() + " better");
         }

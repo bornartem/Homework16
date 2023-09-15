@@ -34,10 +34,15 @@ public class Slytherin extends Hogwarts {
         this.ambitions = ambitions;
     }
 
-    public static void equalsSlytherin (Slytherin graham, Slytherin gregory){
-        if (graham.getTrick() + graham.getResole() + graham.getAmbitions() > graham.getTrick() + graham.getTrick() + gregory.getAmbitions())
+    @Override
+    public String toString() {
+        return super.toString( ) + "trick = " + trick + ", resole = " + resole + ", ambitions = " + ambitions;
+    }
+
+    public void equalsSlytherin (Slytherin gregory){
+        if (this.getTrick() + this.getResole() + this.getAmbitions() > this.getTrick() + this.getTrick() + gregory.getAmbitions())
         {
-            System.out.println(graham.getName() + " better");
+            System.out.println(this.getName() + " better");
         } else {
             System.out.println(gregory.getName() + " better");
         }

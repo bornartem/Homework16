@@ -10,7 +10,6 @@ public class Hogwarts {
         this.spell = spell;
         this.transgression = transgression;
     }
-
     public String getName() {
         return name;
     }
@@ -43,11 +42,19 @@ public class Hogwarts {
         this.transgression = transgression;
     }
 
-    public static void equalsAllStudents(Slytherin draco, Ravenclaw marcus){
-        if (draco.getSpell() + draco.getTransgression()< marcus.getSpell()+ marcus.getTransgression()){
+    @Override
+    public String toString() {
+        return "name = " + name + " surname = " + surname +
+                " , spell=" + spell + ", transgression = " + transgression;
+    }
+    public void printObjectsStudent(){
+        System.out.println(toString());
+    }
+    public void equalsAllStudents(Ravenclaw marcus){
+        if (this.getSpell() + this.getTransgression()< marcus.getSpell()+ marcus.getTransgression()){
             System.out.println(marcus.getName() + " better");
         }else {
-            System.out.println(draco.getName() + " better");
+            System.out.println(this.getName() + " better");
         }
     }
 }

@@ -35,9 +35,14 @@ public class Hufflepuff extends Hogwarts {
         this.honesty = honesty;
     }
 
-    public static void equalsHufflepuff (Hufflepuff sedrick, Hufflepuff jastin) {
-        if (sedrick.getWorkAbility() + sedrick.getLoyalty() + sedrick.getHonesty() < jastin.getWorkAbility() + jastin.getLoyalty() + jastin.getHonesty()) {
-            System.out.println(sedrick.getName() + " better");
+    @Override
+    public String toString() {
+        return super.toString( ) + "workAbility = " + workAbility + ", loyalty = " + loyalty + ", honesty = " + honesty;
+    }
+
+    public void equalsHufflepuff (Hufflepuff jastin) {
+        if (this.getWorkAbility() + this.getLoyalty() + this.getHonesty() < jastin.getWorkAbility() + jastin.getLoyalty() + jastin.getHonesty()) {
+            System.out.println(this.getName() + " better");
         } else {
             System.out.println(jastin.getName() + " better");
         }
